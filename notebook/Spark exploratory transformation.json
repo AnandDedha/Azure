@@ -1,0 +1,562 @@
+{
+	"name": "Spark exploratory transformation",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "datatechSpark",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"50b52121-74c2-4b97-933b-557c2cee5a3d": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"passengerCount": "923257",
+										"puMonth": "923257",
+										"avg_snowDepth": "0",
+										"day_of_week": "923257",
+										"tripType": "923257",
+										"tripDistance": "923257",
+										"vendorID": "923257",
+										"country_code": "923257",
+										"totalAmount": "923257",
+										"avg_temperature": "923257",
+										"day_of_month": "923257",
+										"max_precipDepth": "923257",
+										"puYear": "923257",
+										"hour_of_day": "923257",
+										"normalizeHolidayName": "17606",
+										"countryOrRegion": "17606",
+										"holidayName": "17606",
+										"max_precipTime": "923257",
+										"summary": "count",
+										"month_num": "923257",
+										"tipAmount": "923257"
+									},
+									{
+										"passengerCount": "1.357852688904606",
+										"puMonth": "5.1364462982679795",
+										"avg_snowDepth": "null",
+										"day_of_week": "4.137266221647927",
+										"tripType": "1.0154323227443713",
+										"tripDistance": "3.2325295231988496",
+										"vendorID": "1.833860994284365",
+										"country_code": "null",
+										"totalAmount": "16.112515713388373",
+										"avg_temperature": "18.58190665884031",
+										"day_of_month": "13.844344532454127",
+										"max_precipDepth": "4213.8777393510145",
+										"puYear": "2018.0",
+										"hour_of_day": "13.697660564718166",
+										"normalizeHolidayName": "null",
+										"countryOrRegion": "null",
+										"holidayName": "null",
+										"max_precipTime": "19.26542663635369",
+										"summary": "mean",
+										"month_num": "5.1364462982679795",
+										"tipAmount": "1.0264538909534444"
+									},
+									{
+										"passengerCount": "1.0397434350543042",
+										"puMonth": "0.3432620479749415",
+										"avg_snowDepth": "null",
+										"day_of_week": "1.982096526293111",
+										"tripType": "0.12326468519506639",
+										"tripDistance": "3.7213549381277544",
+										"vendorID": "0.372205570280615",
+										"country_code": "null",
+										"totalAmount": "13.492789079321522",
+										"avg_temperature": "3.6046653323635867",
+										"day_of_month": "9.330046641186325",
+										"max_precipDepth": "4389.942208506073",
+										"puYear": "0.0",
+										"hour_of_day": "5.987036976846423",
+										"normalizeHolidayName": "null",
+										"countryOrRegion": "null",
+										"holidayName": "null",
+										"max_precipTime": "8.120658513433671",
+										"summary": "stddev",
+										"month_num": "0.3432620479749415",
+										"tipAmount": "2.074783792187912"
+									},
+									{
+										"passengerCount": "0",
+										"puMonth": "5",
+										"avg_snowDepth": "null",
+										"day_of_week": "1",
+										"tripType": "1",
+										"tripDistance": "0.0",
+										"vendorID": "1",
+										"country_code": "US",
+										"totalAmount": "-235.0",
+										"avg_temperature": "11.900000000000006",
+										"day_of_month": "1",
+										"max_precipDepth": "0.0",
+										"puYear": "2018",
+										"hour_of_day": "0",
+										"normalizeHolidayName": "Memorial Day",
+										"countryOrRegion": "United States",
+										"holidayName": "Memorial Day",
+										"max_precipTime": "1.0",
+										"summary": "min",
+										"month_num": "5",
+										"tipAmount": "-2.0"
+									},
+									{
+										"passengerCount": "9",
+										"puMonth": "6",
+										"avg_snowDepth": "null",
+										"day_of_week": "7",
+										"tripType": "2",
+										"tripDistance": "621.1",
+										"vendorID": "2",
+										"country_code": "US",
+										"totalAmount": "2704.8",
+										"avg_temperature": "26.072330097087377",
+										"day_of_month": "31",
+										"max_precipDepth": "9999.0",
+										"puYear": "2018",
+										"hour_of_day": "23",
+										"normalizeHolidayName": "Memorial Day",
+										"countryOrRegion": "United States",
+										"holidayName": "Memorial Day",
+										"max_precipTime": "24.0",
+										"summary": "max",
+										"month_num": "6",
+										"tipAmount": "450.0"
+									}
+								],
+								"schema": {
+									"summary": "string",
+									"country_code": "string",
+									"vendorID": "string",
+									"passengerCount": "string",
+									"tripDistance": "string",
+									"tipAmount": "string",
+									"totalAmount": "string",
+									"tripType": "string",
+									"puYear": "string",
+									"puMonth": "string",
+									"month_num": "string",
+									"day_of_month": "string",
+									"day_of_week": "string",
+									"hour_of_day": "string",
+									"countryOrRegion": "string",
+									"holidayName": "string",
+									"normalizeHolidayName": "string",
+									"avg_snowDepth": "string",
+									"avg_temperature": "string",
+									"max_precipTime": "string",
+									"max_precipDepth": "string"
+								}
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "count",
+									"categoryFieldKeys": [
+										"summary"
+									],
+									"seriesFieldKeys": [
+										"summary"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/d86a0a25-51b7-4f76-85ad-d5ed40f90145/resourceGroups/dataengineer/providers/Microsoft.Synapse/workspaces/datatechws/bigDataPools/datatechSpark",
+				"name": "datatechSpark",
+				"type": "Spark",
+				"endpoint": "https://datatechws.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/datatechSpark",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "2.4",
+				"nodeCount": 10,
+				"cores": 4,
+				"memory": 28,
+				"extraHeader": null
+			}
+		},
+		"cells": [
+			{
+				"cell_type": "markdown",
+				"source": [
+					"# Using Azure Open Datasets in Synapse - Enrich NYC Green Taxi Data with Holiday and Weather"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"from azureml.opendatasets import NycTlcGreen\n",
+					"\n",
+					"from datetime import datetime\n",
+					"from dateutil import parser\n",
+					"end_date = parser.parse('2018-06-12')\n",
+					"start_date = parser.parse('2018-06-01')\n",
+					"\n",
+					"nyc_tlc = NycTlcGreen(start_date=start_date, end_date=end_date)\n",
+					"nyc_tlc_df = nyc_tlc.to_spark_dataframe()"
+				],
+				"attachments": null,
+				"execution_count": 1
+			},
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# Perform data exploratory analysis"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"# Schema of the dataset\n",
+					"\n",
+					"nyc_tlc_df.printSchema()\n",
+					"\n",
+					"# Display 5 rows\n",
+					"\n",
+					"nyc_tlc_df.show(5, truncate = False)\n",
+					"\n",
+					"# Display number of the record in the dataframe\n",
+					"\n",
+					"nyc_tlc_df.count()\n",
+					"\n",
+					"\n",
+					"\n",
+					"# Statistical properties of a field\n",
+					"\n",
+					"nyc_tlc_df.describe([\"fareAmount\"]).show()\n",
+					"\n",
+					"\n",
+					"# Remove unused columns from nyc green taxi data\n",
+					"# To remove any column from the pyspark dataframe, use the drop function. Example df = df.drop(“col_name”)\n",
+					"\n",
+					"columns_to_remove = [\"lpepDropoffDatetime\", \"puLocationId\", \"doLocationId\",  \n",
+					"                     \"pickupLatitude\", \"dropoffLongitude\",\"dropoffLatitude\" ,\"rateCodeID\", \n",
+					"                     \"storeAndFwdFlag\",\"paymentType\", \"fareAmount\", \"extra\", \"mtaTax\",\n",
+					"                     \"improvementSurcharge\", \"tollsAmount\", \"ehailFee\", \"tripType \"  \n",
+					"                    ]\n",
+					"\n",
+					"nyc_tlc_df_clean = nyc_tlc_df.select([column for column in nyc_tlc_df.columns if column not in columns_to_remove])\n",
+					"\n",
+					"# Display 5 rows\n",
+					"nyc_tlc_df_clean.show(5)\n",
+					"\n",
+					"# Find unique values of a categorical column\n",
+					"\n",
+					"nyc_tlc_df_clean.select('vendorID').distinct()\n",
+					"\n",
+					"\n",
+					"# Count the missing values of PySpark Dataframe column\n",
+					"# To know the missing values, we first count the null values in a dataframe.\n",
+					"nyc_tlc_df_clean.filter(nyc_tlc_df_clean['pickupLongitude'].isNull()).count()"
+				],
+				"attachments": null,
+				"execution_count": 4
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"# Tranformation of Spark dataframe "
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"# Extract month, day of month, and day of week from pickup datetime and add a static column for the country code to join holiday data. \n",
+					"\n",
+					"import pyspark.sql.functions as f\n",
+					"\n",
+					"nyc_tlc_df_expand = nyc_tlc_df.withColumn('datetime',f.to_date('lpepPickupDatetime'))\\\n",
+					"                .withColumn('month_num',f.month(nyc_tlc_df.lpepPickupDatetime))\\\n",
+					"                .withColumn('day_of_month',f.dayofmonth(nyc_tlc_df.lpepPickupDatetime))\\\n",
+					"                .withColumn('day_of_week',f.dayofweek(nyc_tlc_df.lpepPickupDatetime))\\\n",
+					"                .withColumn('hour_of_day',f.hour(nyc_tlc_df.lpepPickupDatetime))\\\n",
+					"                .withColumn('country_code',f.lit('US'))"
+				],
+				"attachments": null,
+				"execution_count": 5
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"Remove some of the columns that won't need for modeling or additional feature building.\n",
+					"\n",
+					"\n",
+					""
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"## Enrich with holiday data"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"from azureml.opendatasets import PublicHolidays\n",
+					"\n",
+					"hol = PublicHolidays(start_date=start_date, end_date=end_date)\n",
+					"hol_df = hol.to_spark_dataframe()\n",
+					"\n",
+					"# Display data\n",
+					"hol_df.show(5, truncate = False)"
+				],
+				"attachments": null,
+				"execution_count": 6
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"Rename the countryRegionCode and date columns to match the respective field names from the taxi data, and also normalize the time so it can be used as a key. "
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"hol_df_clean = hol_df.withColumnRenamed('countryRegionCode','country_code')\\\n",
+					"            .withColumn('datetime',f.to_date('date'))\n",
+					"\n",
+					"hol_df_clean.show(5)"
+				],
+				"attachments": null,
+				"execution_count": 7
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"Next, join the holiday data with the taxi data by performing a left-join. This will preserve all records from taxi data, but add in holiday data where it exists for the corresponding datetime and country_code, which in this case is always \"US\". Preview the data to verify that they were merged correctly."
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"# enrich taxi data with holiday data\n",
+					"nyc_taxi_holiday_df = nyc_tlc_df_clean.join(hol_df_clean, on = ['datetime', 'country_code'] , how = 'left')\n",
+					"\n",
+					"nyc_taxi_holiday_df.show(5)"
+				],
+				"attachments": null,
+				"execution_count": 8
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"# Create a temp table and filter out non empty holiday rows\n",
+					"\n",
+					"nyc_taxi_holiday_df.createOrReplaceTempView(\"nyc_taxi_holiday_df\")\n",
+					"spark.sql(\"SELECT * from nyc_taxi_holiday_df WHERE holidayName is NOT NULL \").show(5, truncate = False)"
+				],
+				"attachments": null,
+				"execution_count": 9
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"## Enrich with weather data¶\n",
+					"\n",
+					"Now we append NOAA surface weather data to the taxi and holiday data. Use a similar approach to fetch the [NOAA weather history data](https://azure.microsoft.com/en-us/services/open-datasets/catalog/noaa-integrated-surface-data/) from Azure Open Datasets. "
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"from azureml.opendatasets import NoaaIsdWeather\n",
+					"\n",
+					"isd = NoaaIsdWeather(start_date, end_date)\n",
+					"isd_df = isd.to_spark_dataframe()"
+				],
+				"attachments": null,
+				"execution_count": 10
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"isd_df.show(5, truncate = False)"
+				],
+				"attachments": null,
+				"execution_count": 11
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"# Filter out weather info for new york city, remove the recording with null temperature \n",
+					"\n",
+					"weather_df = isd_df.filter(isd_df.latitude >= '40.53')\\\n",
+					"                        .filter(isd_df.latitude <= '40.88')\\\n",
+					"                        .filter(isd_df.longitude >= '-74.09')\\\n",
+					"                        .filter(isd_df.longitude <= '-73.72')\\\n",
+					"                        .filter(isd_df.temperature.isNotNull())\\\n",
+					"                        .withColumnRenamed('datetime','datetime_full')\n",
+					"                         "
+				],
+				"attachments": null,
+				"execution_count": 12
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"# Remove unused columns\n",
+					"\n",
+					"columns_to_remove_weather = [\"usaf\", \"wban\", \"longitude\", \"latitude\"]\n",
+					"weather_df_clean = weather_df.select([column for column in weather_df.columns if column not in columns_to_remove_weather])\\\n",
+					"                        .withColumn('datetime',f.to_date('datetime_full'))\n",
+					"\n",
+					"weather_df_clean.show(5, truncate = False)"
+				],
+				"attachments": null,
+				"execution_count": 13
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"Next group the weather data so that you have daily aggregated weather values. \n",
+					""
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"# Enrich weather data with aggregation statistics\n",
+					"\n",
+					"aggregations = {\"snowDepth\": \"mean\", \"precipTime\": \"max\", \"temperature\": \"mean\", \"precipDepth\": \"max\"}\n",
+					"weather_df_grouped = weather_df_clean.groupby(\"datetime\").agg(aggregations)"
+				],
+				"attachments": null,
+				"execution_count": 14
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"weather_df_grouped.show(5)"
+				],
+				"attachments": null,
+				"execution_count": 15
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"# Rename columns\n",
+					"\n",
+					"weather_df_grouped = weather_df_grouped.withColumnRenamed('avg(snowDepth)','avg_snowDepth')\\\n",
+					"                                       .withColumnRenamed('avg(temperature)','avg_temperature')\\\n",
+					"                                       .withColumnRenamed('max(precipTime)','max_precipTime')\\\n",
+					"                                       .withColumnRenamed('max(precipDepth)','max_precipDepth')"
+				],
+				"attachments": null,
+				"execution_count": 16
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"Merge the taxi and holiday data you prepared with the new weather data. This time you only need the datetime key, and again perform a left-join of the data. Run the describe() function on the new dataframe to see summary statistics for each field."
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"# enrich taxi data with weather\n",
+					"nyc_taxi_holiday_weather_df = nyc_taxi_holiday_df.join(weather_df_grouped, on = 'datetime' , how = 'left')\n",
+					"nyc_taxi_holiday_weather_df.cache()"
+				],
+				"attachments": null,
+				"execution_count": 17
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"nyc_taxi_holiday_weather_df.show(5)"
+				],
+				"attachments": null,
+				"execution_count": 18
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"collapsed": false
+				},
+				"source": [
+					"# Run the describe() function on the new dataframe to see summary statistics for each field.\n",
+					"\n",
+					"display(nyc_taxi_holiday_weather_df.describe())"
+				],
+				"attachments": null,
+				"execution_count": 19
+			},
+			{
+				"cell_type": "markdown",
+				"source": [
+					"The summary statistics shows that the totalAmount field has negative values, which don't make sense in the context.\n",
+					"\n",
+					""
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"# Remove invalid rows with less than 0 taxi fare or tip\n",
+					"final_df = nyc_taxi_holiday_weather_df.filter(nyc_taxi_holiday_weather_df.tipAmount > 0)\\\n",
+					"                                      .filter(nyc_taxi_holiday_weather_df.totalAmount > 0)"
+				],
+				"attachments": null,
+				"execution_count": 20
+			}
+		]
+	}
+}
