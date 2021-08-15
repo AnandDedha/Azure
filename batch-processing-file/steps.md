@@ -19,3 +19,10 @@
             create a token to access synpase (store in Azure key vault)
             
        7. Check the firewall setting to execute notebook
+       8. Pipeline 
+           - create two integration datasets
+              a. datalake storage with parameters
+              b. customer table
+           - Lookup with Query
+           - Foreach with variables and output from lookup
+           - 3 activities ( Two Set variables and copydata )
