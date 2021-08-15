@@ -17,3 +17,5 @@
             Vault URI
             Resource ID
             create a token to access synpase (store in Azure key vault)
+            
+       7. Check the firewall setting to execute notebook
