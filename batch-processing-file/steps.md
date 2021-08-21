@@ -8,7 +8,7 @@
         - ADLGS
         - username and password of dedicated sql pool
      
-    5. Create databricks workspace
+    5. Create databricks workspace - datatechdb
     6. create databricks cluster 
        - add valut info to databricks 
            #secrets/createScope 
