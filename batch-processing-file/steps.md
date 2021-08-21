@@ -6,7 +6,7 @@
             Give access to Azure Synapse analytics workspace
     4. Add Secrets 
         - ADLGS
-        - username and password of dedicated sql pool
+        - username and password of dedicated sql pool  (azure-sql-pwd & azure-sql-username)
      
     5. Create databricks workspace - datatechdb
     6. create databricks cluster 
