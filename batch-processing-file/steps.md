@@ -20,7 +20,7 @@
                     Resource ID
         - create a token to access synpase (store in Azure key vault)  name it databricks-access-synapse  
         - Import & execute the dataprocessing script 
- #### 7. Create customer table in edw
+ #### 7. Create customer & watermark tables in edw
  #### 8. Create link services blob , azure keyvault and databricks
  #### 9. Create First Pipeline to copy data from ADLS to datawarehouse      
            - create two integration datasets
