@@ -21,7 +21,7 @@
             create a token to access synpase (store in Azure key vault)  - databricks-access-synapse            
        7. Create customer table in edw
        8. Pipeline 
-           - create link services
+           - create link services blob , azure keyvault and databricks
            - create two integration datasets
               a. datalake storage with parameters ( Container, Dir_name, File_name)
               b. customer table from Azure synapse dedciated SQL pool
@@ -41,4 +41,4 @@
                      directory - @variables('DATA_DIR') (dynamic)
                      file_name - @variables('FILE_NAME') (dynamic)
                      preview the data 
-                     
+            9. Second Pipeline 
