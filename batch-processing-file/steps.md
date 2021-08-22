@@ -13,7 +13,7 @@
      
  #### 5. Create databricks workspace - e.g. datatechdb
  #### 6. create databricks cluster 
-       - Add valut info to databricks  #secrets/createScope 
+       - Add vault info to databricks  #secrets/createScope 
             Name - datatech
             Copy the following info from Key-vault properties 
                     Vault URI
