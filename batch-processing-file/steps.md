@@ -23,8 +23,8 @@
        8. Pipeline 
            - create link services
            - create two integration datasets
-              a. datalake storage with parameters
-              b. customer table
+              a. datalake storage with parameters ( Container, Dir_name, File_name)
+              b. customer table from Azure synapse dedciated SQL pool
            - Lookup with Query
            - Foreach with variables and output from lookup
            - 3 activities ( Two Set variables and copydata )
