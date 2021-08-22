@@ -27,4 +27,5 @@
               b. customer table from Azure synapse dedciated SQL pool
            - Lookup with Query
            - Foreach with variables and output from lookup value (@activity('Get_date_list').output.value)
+           - Set pipeline variables (
            - 3 activities ( Two Set variables and copydata )
