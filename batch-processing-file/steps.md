@@ -19,7 +19,7 @@
             Vault URI
             Resource ID
             create a token to access synpase (store in Azure key vault)  - databricks-access-synapse            
-       7. Check the firewall setting to execute notebook
+       7. Create customer table in edw
        8. Pipeline 
            - create two integration datasets
               a. datalake storage with parameters
