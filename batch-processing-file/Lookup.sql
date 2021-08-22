@@ -4,7 +4,7 @@
 
 DECLARE @StartDate DATE = (
 		SELECT dateadd(day, - 1, CONVERT(VARCHAR(10), [process_date_hour], 126)) [LAST_UPDATE]
-		FROM [stage].[current_watermark]
+		FROM [active].[current_watermark]
 		)
 DECLARE @EndDate DATE = (
 		SELECT cast(DATEADD(day, - 1, getdate()) AS DATE) AS StartDate
