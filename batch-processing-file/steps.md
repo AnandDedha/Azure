@@ -30,4 +30,15 @@
            - Set pipeline variables ( DATA_DIR - data/customer/2021/01
                                       FILE_NAME - customers_2021-01-01
                                      )
-           - 3 activities ( Two Set variables and copydata )
+           - 3 activities in foreach ( Two Set variables and copydata )
+             - Set_DIR_NAME 
+                - Set varaibles DATA_DIR - @item().DATA_DIR
+             - Set_FILE_NAME
+                - Set varaibles FILE_NAME - @item().FILE_NAME
+             - Copy activity
+                - source datalake integrration dataset
+                 - please set 
+                     directory - @variables('DATA_DIR') (dynamic)
+                     file_name - @variables('FILE_NAME') (dynamic)
+                     preview the data 
+                     
