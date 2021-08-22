@@ -2,6 +2,7 @@
     1. Create Azure Synpase workspace 
        create dedicated sql pool 
     2. Upload the data using MS Storage explorer
+    3. Create a blob storage and container in it
     3. create azure key vault cluster 
             Give Access to Databricks
             Give access to Azure Synapse analytics workspace
