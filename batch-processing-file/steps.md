@@ -26,5 +26,5 @@
               a. datalake storage with parameters ( Container, Dir_name, File_name)
               b. customer table from Azure synapse dedciated SQL pool
            - Lookup with Query
-           - Foreach with variables and output from lookup
+           - Foreach with variables and output from lookup value (@activity('Get_date_list').output.value)
            - 3 activities ( Two Set variables and copydata )
