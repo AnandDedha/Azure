@@ -1,6 +1,6 @@
 ## Lookup activity names
-    1. OldWatermarkvalue
-    2. NewWaterMarkTable
+    1. LookupOldWatermarkvalue
+    2. LookupNewWaterMarkTable
     
 ## NewWaterMarkTable query
     Select max(LastModifytime) as NewWatermarkvalue from data_source_table
