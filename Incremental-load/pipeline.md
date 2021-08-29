@@ -12,5 +12,5 @@
     @CONCAT('Incremental-', pipeline().RunId, '.txt')
     
  ## Import values into the stored procedure 
-    @activity('NewWaterMarkTable').output.firstRow.NewWatermarkvalue
-    @activity('OldWatermarkvalue').output.firstRow.TableName
+    @{activity('LookupNewWaterMarkActivity').output.firstRow.NewWatermarkvalue}
+    @{activity('LookupOldWaterMarkActivity').output.firstRow.TableName}
