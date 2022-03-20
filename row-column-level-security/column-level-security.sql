@@ -27,3 +27,4 @@ INSERT INTO sales2.Membership VALUES   ('San','333333333' ,'Dp', '888.123.4567',
 EXECUTE AS USER = 'TestUser';   
 SELECT * FROM sales2.Membership;
 
+REVERT;
