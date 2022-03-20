@@ -1,6 +1,3 @@
-
-
-
 -- Create a Scheman & Table
 CREATE SCHEMA Sales
 GO
@@ -43,11 +40,11 @@ CREATE USER Kukku WITHOUT LOGIN;
 
 
 -- Grant Read Access to the Users
-GRANT SELECT ON Sales.RegionTO SalesManager;  
-GRANT SELECT ON Sales.RegionTO Mann;  
-GRANT SELECT ON Sales.RegionTO Anna; 
-GRANT SELECT ON Sales.RegionTO Abhi;  
-GRANT SELECT ON Sales.RegionTO Kukku;
+GRANT SELECT ON Sales.Region TO SalesManager;  
+GRANT SELECT ON Sales.Region TO Mann;  
+GRANT SELECT ON Sales.Region TO Anna; 
+GRANT SELECT ON Sales.Region TO Abhi;  
+GRANT SELECT ON Sales.Region TO Kukku;
 
 
 
@@ -69,7 +66,7 @@ WHERE @SalesRepName = USER_NAME() OR USER_NAME() = 'SalesManager';
 --Bind Security Policy to Filter Predicate
 CREATE SECURITY POLICY MySalesFilterPolicy  
 ADD FILTER PREDICATE spf.itvf_securitypredicate(SalesRepName)
-ON Sales.Territory
+ON Sales.Region
 WITH (STATE = ON);  
 
 --test our security predicate function SELECT permissions
@@ -81,27 +78,27 @@ GRANT SELECT ON spf.itvf_securitypredicate TO Kukku;
 
 
 EXECUTE AS USER = 'Mann';  
-SELECT * FROM Sales.Territory
+SELECT * FROM Sales.Region
 ORDER BY id;
 REVERT;  
   
 EXECUTE AS USER = 'Anna';  
-SELECT * FROM Sales.Territory
+SELECT * FROM Sales.Region
 ORDER BY id;
 REVERT;  
   
 EXECUTE AS USER = 'Abhi';  
-SELECT * FROM Sales.Territory
+SELECT * FROM Sales.Region
 ORDER BY id;
 REVERT;
 
 EXECUTE AS USER = 'Kukku';  
-SELECT * FROM Sales.Territory
+SELECT * FROM Sales.Region
 ORDER BY id;
 REVERT;
 
 EXECUTE AS USER = 'SalesManager';  
-SELECT * FROM Sales.Territory
+SELECT * FROM Sales.Region
 ORDER BY id;
 REVERT;
 
@@ -121,7 +118,7 @@ DROP USER Kukku;
 
 
 DROP SECURITY POLICY MySalesFilterPolicy;
-DROP TABLE Sales.Territory;
+DROP TABLE Sales.Region;
 DROP FUNCTION spf.itvf_securitypredicate;
 DROP SCHEMA spf;
 DROP SCHEMA Sales;
